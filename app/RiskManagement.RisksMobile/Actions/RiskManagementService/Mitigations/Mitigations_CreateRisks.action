@@ -1,0 +1,27 @@
+{
+    "ParentLink": {
+        "Property": "risks",
+        "Target": {
+            "EntitySet": "Mitigations",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/RisksMobile/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/RisksMobile/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "title": "#Page:Mitigations_CreateRisks/#Control:title/#Value",
+        "prio": "#Page:Mitigations_CreateRisks/#Control:prio/#Value",
+        "descr": "#Page:Mitigations_CreateRisks/#Control:descr/#Value",
+        "impact": "#Page:Mitigations_CreateRisks/#Control:impact/#Value",
+        "criticality": "#Page:Mitigations_CreateRisks/#Control:criticality/#Value",
+        "supplier_BusinessPartner": "#Page:Mitigations_CreateRisks/#Control:supplier_BusinessPartner/#SelectedValue"
+    },
+    "Target": {
+        "EntitySet": "Risks",
+        "Service": "/RisksMobile/Services/RiskManagementService.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

@@ -1,0 +1,20 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/RisksMobile/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/RisksMobile/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "createdAt": "#Page:Mitigations_Create/#Control:createdAt/#Value",
+        "createdBy": "#Page:Mitigations_Create/#Control:createdBy/#Value",
+        "description": "#Page:Mitigations_Create/#Control:description/#Value",
+        "owner": "#Page:Mitigations_Create/#Control:owner/#Value",
+        "timeline": "#Page:Mitigations_Create/#Control:timeline/#Value"
+    },
+    "Target": {
+        "EntitySet": "Mitigations",
+        "Service": "/RisksMobile/Services/RiskManagementService.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

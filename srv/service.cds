@@ -40,9 +40,15 @@ service RiskManagementService
         };
 }
 
+// Anular la anotación que causa el error de validación en el cliente móvil
+annotate RiskManagementService.A_BusinessPartner with @(
+    Common.AddressViaNavigationPath : null
+);
+
 annotate RiskManagementService with @requires :
 [
     'authenticated-user',
     'RiskViewer',
     'RiskManager'
 ];
+
